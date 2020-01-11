@@ -24,17 +24,17 @@ function BooksComponent(props) {
 
                                                 {props.savedBookId.includes(book.id) ?
                                                     
-                                                    (<button type="button" className="btn btn-secondary float-right ml-2" disabled>
+                                                    (<button type="button" className="btn btn-dark float-right ml-2" disabled>
                                                         <i className="fas fa-bookmark"></i>
                                                     </button> )
 
                                                     :
 
-                                                    ( <button type="button" className="btn btn-secondary float-right ml-2" onClick={props.saveBook} data-title={book.volumeInfo.title} data-authors={book.volumeInfo.authors[0]} data-description={book.volumeInfo.description} data-image={book.volumeInfo.imageLinks.thumbnail} data-link={book.volumeInfo.infoLink} data-bookid={book.id}><i className="far fa-bookmark"></i></button> )
+                                                    ( <button type="button" className="btn btn-outline-dark float-right ml-2" onClick={props.saveBook} data-title={book.volumeInfo.title} data-authors={book.volumeInfo.authors[0]} data-description={book.volumeInfo.description} data-image={book.volumeInfo.imageLinks.thumbnail} data-link={book.volumeInfo.infoLink} data-bookid={book.id}><i className="far fa-bookmark"></i></button> )
                                                 }
                                                 
                                                 <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">
-                                                    <button type="button" className="btn btn-info float-right">View</button>
+                                                    <button type="button" className="btn btn-outline-info float-right">View</button>
                                                 </a>
                                                 <p>
                                                     {book.volumeInfo.title}

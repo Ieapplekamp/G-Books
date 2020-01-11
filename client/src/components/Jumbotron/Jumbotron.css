@@ -1,0 +1,8 @@
+.jumbotron {
+    color: white;
+    font-weight: 900;
+    padding-top: 110px;
+    height: 340px;
+    background-image: url("https://images.pexels.com/photos/762686/pexels-photo-762686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+}
