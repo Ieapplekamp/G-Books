@@ -7,7 +7,7 @@ function BooksComponent(props) {
             <div className="col-lg-12">
                 <div className="card">
                     <div className="card-body">
-                        <p>Top Results:</p>
+                        <p className="font-italic">Top Results:</p>
 
                         {props.books.items ?
                             

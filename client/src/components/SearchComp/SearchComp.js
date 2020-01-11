@@ -15,7 +15,6 @@ function SearchComp(props) {
                                     <i className="fas fa-search"></i>
                                 </button>
                             </div>
-                            
                         </form>
                     </div>
                 </div>

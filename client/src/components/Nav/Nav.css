@@ -1,0 +1,19 @@
+li, a {
+    list-style-type: none;
+    color: black;
+    background-color: rgb(233, 236, 239);
+    border-radius: 10px;
+    border: rgb(52, 58, 64);
+    cursor: pointer;
+    margin: 2px;
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(52, 58, 64);
+    transition: ease 0.5s;
+}
+
+.nav-item:hover {
+    border: none!important;
+}
