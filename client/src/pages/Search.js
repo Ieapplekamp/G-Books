@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchComp from "../components/SearchComp/SearchComp.js"
 import BookComponent from "../components/BooksComp/BooksComp.js";
-import API from "../utils/API";
+import API from "../utils/API.js";
 import Nav from "../components/Nav/Nav.js";
 import Jumbotron from "../components/Jumbotron/Jumbotron.js";
 
@@ -35,9 +35,9 @@ class Search extends Component {
         if(this.state.search) {
           search = this.state.search;
         } else {
-          search = "Many Lives Many Masters";
+          search = "1984";
         };
-        fetch('https://www.googleapis.com/books/v1/volumes?q='+search+'&printType=books&key=AIzaSyD9mokEf1Rs_8FOlao5lUSNLNcnZc7keYQ')
+        fetch('https://www.googleapis.com/books/v1/volumes?q=' + search + '&printType=books&key=AIzaSyD9mokEf1Rs_8FOlao5lUSNLNcnZc7keYQ')
         .then(res => res.json())
         .then(
           (result) => {
