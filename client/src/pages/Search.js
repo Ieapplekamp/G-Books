@@ -35,7 +35,7 @@ class Search extends Component {
         if(this.state.search) {
           search = this.state.search;
         } else {
-          search = "1984";
+          search = "1984, by George Orwell";
         };
         fetch('https://www.googleapis.com/books/v1/volumes?q=' + search + '&printType=books&key=AIzaSyD9mokEf1Rs_8FOlao5lUSNLNcnZc7keYQ')
         .then(res => res.json())
@@ -76,11 +76,9 @@ class Search extends Component {
     render() {
         return (
           <div>
-            <Nav
-              search = "active"
-            />
+            <Nav />
             <Jumbotron/>
-            <div className="container">
+            <div className="container-fluid">
               <SearchComp 
                 search = {this.state.search}
                 handleInputChange = {this.handleInputChange}

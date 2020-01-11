@@ -29,13 +29,11 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <Nav
-          saved = "active"
-        />
+        <Nav/>
         <Jumbotron/>
         <div className="container">
           <SavedBooks
-            bookArray = {this.state.books}
+            books = {this.state.books}
             deleteBook = {this.deleteBook}
           />
         </div>
