@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import SearchCard from "../components/SearchCard"
-import BookCards from "../components/BookCards";
+import SearchComp from "../components/SearchComp/SearchComp.js"
+import BookComponent from "../components/BooksComp/BooksComp.js";
 import API from "../utils/API";
-import Navbar from "../components/Navbar";
-import Jumbotron from "../components/Jumbotron";
+import Nav from "../components/Nav/Nav.js";
+import Jumbotron from "../components/Jumbotron/Jumbotron.js";
 
 class Search extends Component {
     state = {
@@ -37,7 +37,7 @@ class Search extends Component {
         } else {
           search = "Many Lives Many Masters";
         };
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&printType=books&key=AIzaSyCqwaY-3wWYY4jadfbnn8bv2zPEjZA2Moo`)
+        fetch('https://www.googleapis.com/books/v1/volumes?q='+search+'&printType=books&key=AIzaSyD9mokEf1Rs_8FOlao5lUSNLNcnZc7keYQ')
         .then(res => res.json())
         .then(
           (result) => {
@@ -76,17 +76,17 @@ class Search extends Component {
     render() {
         return (
           <div>
-            <Navbar
+            <Nav
               search = "active"
             />
             <Jumbotron/>
             <div className="container">
-              <SearchCard 
+              <SearchComp 
                 search = {this.state.search}
                 handleInputChange = {this.handleInputChange}
                 bookSearch = {this.bookSearch}
               />
-              <BookCards
+              <BookComponent
                 books = {this.state.books}
                 saveBook = {this.saveBook}
                 savedBookId = {this.state.savedBookId}

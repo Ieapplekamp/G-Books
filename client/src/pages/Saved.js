@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import SavedCards from "../components/SavedCards";
-import Navbar from "../components/Navbar";
-import Jumbotron from "../components/Jumbotron";
+import SavedBooks from "../components/SavedBooks/SavedBooks.js";
+import Nav from "../components/Nav/Nav.js";
+import Jumbotron from "../components/Jumbotron/Jumbotron.js";
 
 class Search extends Component {
   state = {
@@ -29,12 +29,12 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <Navbar
+        <Nav
           saved = "active"
         />
         <Jumbotron/>
         <div className="container">
-          <SavedCards
+          <SavedBooks
             bookArray = {this.state.books}
             deleteBook = {this.deleteBook}
           />
