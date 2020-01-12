@@ -14,4 +14,7 @@ Mongoose/MongoDB
 Express/Node JS
 ```
 
+### Landing Page:
 ![Landing](/client/src/images/landing.png)
+### Search:
+![Search](/client/src/images/search.png)
