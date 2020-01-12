@@ -1,3 +1,18 @@
 body {
     font-family: 'Mate', serif;
+    background-color: rgb(181,195,212)
+}
+
+img {
+    width: 150px;
+}
+
+.btn:hover {
+    transition: ease 0.5s;
+}
+
+@media only screen and (max-width: 767px) {
+    .sp {
+        margin-top: 20px;
+    }
 }

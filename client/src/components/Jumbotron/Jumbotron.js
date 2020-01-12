@@ -3,9 +3,9 @@ import "./Jumbotron.css"
 
 function Jumbotron() {
   return (
-    <div className="jumbotron text-center">
-        <h1 className="display-4">Google Books Search!</h1>
-        <p>Search and Save books of interest</p>
+    <div className="jumbotron">
+        <h1 className="display-3 text-center">Google Books Search</h1>
+        <h4 className="text-center mt-4">Search and Save books of interest!</h4>
     </div>
   );
 }

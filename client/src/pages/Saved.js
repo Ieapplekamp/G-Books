@@ -17,7 +17,6 @@ class Search extends Component {
 
   deleteBook = (event) => {
     event.preventDefault();
-    console.log(event.target.getAttribute('data-id'));
     API.deleteBook(event.target.getAttribute('data-id'))
       .then(res => {
         API.getBooks()
@@ -31,7 +30,7 @@ class Search extends Component {
       <div>
         <Nav/>
         <Jumbotron/>
-        <div className="container">
+        <div className="container-fluid">
           <SavedBooks
             books = {this.state.books}
             deleteBook = {this.deleteBook}

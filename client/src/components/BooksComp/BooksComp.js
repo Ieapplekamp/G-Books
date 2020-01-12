@@ -37,17 +37,18 @@ function BooksComponent(props) {
                                                     <button type="button" className="btn btn-outline-info float-right">View</button>
                                                 </a>
                                                 <p>
-                                                    {book.volumeInfo.title}
+                                                    <span className="font-italic">Title:</span> <span className="h4">{book.volumeInfo.title}</span>
                                                 </p>
                                                 <p>
-                                                    Author(s): {book.volumeInfo.authors[0]}
+                                                    <span className="font-italic">Author(s):</span> <span className="font-weight-bold">{book.volumeInfo.authors[0]}</span>
                                                 </p>
                                                 
                                                 <div className="row">
                                                     <div className="col-lg-3 col-md-3 col-12">
-                                                        <img src={book.volumeInfo.imageLinks.thumbnail} className="img-fluid" alt={book.volumeInfo.title}></img>
+                                                        <img src={book.volumeInfo.imageLinks.thumbnail} className="img-fluid rounded" alt={book.volumeInfo.title}></img>
                                                     </div>
                                                     <div className="col-lg-9 col-md-9 col-12">
+                                                        <p className="font-italic sp">Description:</p>
                                                         <p>{book.volumeInfo.description}</p>
                                                     </div>
                                                 </div>
